@@ -23,10 +23,13 @@ CMD="g++ -std=c++14 -Wall -Wextra -Wno-sign-compare *.cpp -g -o myprogram.exe"
 echo $CMD
 $CMD
 
-echo "*** running"
 CMD="./myprogram.exe"
-echo $CMD
-$CMD
+
+if [ -f $CMD ]; then
+  echo "*** running"
+  echo $CMD
+  $CMD
+fi
 
 date
 
